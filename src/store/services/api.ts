@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery, retry } from "@reduxjs/toolkit/query/react";
 import { RootState } from "../store";
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: process.env.baseURL,
+  baseUrl: 'http://109.172.114.6/employee/api',
   prepareHeaders: (headers, { getState }) => {
     const token =
       (getState() as RootState).auth.user?.token ||
